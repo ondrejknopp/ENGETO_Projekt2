@@ -1,5 +1,6 @@
 # Project2_Ondrej Knopp
 
+
 def vygeneruj_matici(nradku, nsloupcu):
     matrix = [[0] * nsloupcu for i in range(nradku)]
     return matrix
@@ -91,7 +92,9 @@ def main():
     game_on = True
     tah = 1
     while game_on:
-        cislo = int(input("Zadej pozici: "))
+        cislo_hrace = 2 if tah % 2 == 0 else 1
+        print("Hráči číslo " + str(cislo_hrace) + ", zadej pozici:")
+        cislo = int(input(""))
         # kdyz na pozici uz není O, nemuzu sem uz zapisovat! osetrit
         radek, sloupec = preved_na_pozici(cislo, rozmer)
         if piskvorky[radek][sloupec] == 0:
